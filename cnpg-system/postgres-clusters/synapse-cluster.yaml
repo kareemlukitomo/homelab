@@ -5,6 +5,28 @@ metadata:
   namespace: matrix
 spec:
   instances: 3
-
   storage:
-    size: 2Gi
+    size: 8Gi
+  bootstrap:
+    initdb:
+      options: "-U postgres"
+    postInitApplicationSQL:
+      - |
+        DO
+        \$do\$
+        BEGIN
+          IF NOT EXISTS (
+            SELECT
+            FROM   pg_catalog.pg_user
+            WHERE  usename = 'synapse_user') THEN
+            CREATE USER synapse_user WITH PASSWORD '$$${SYNAPSE_USER_PASSWORD}$$';
+          END IF;
+        END
+        \$do\$;
+        CREATE DATABASE synapse WITH ENCODING 'UTF8' LC_COLLATE='C' LC_CTYPE='C' TEMPLATE=template0 OWNER=synapse_user;
+  env:
+    - name: SYNAPSE_USER_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: synapse-db-secret
+          key: synapse_user_password
