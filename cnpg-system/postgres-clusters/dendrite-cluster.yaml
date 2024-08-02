@@ -1,0 +1,10 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: dendrite-cluster
+  namespace: matrix
+spec:
+  instances: 3
+
+  storage:
+    size: 2Gi
