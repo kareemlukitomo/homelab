@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: postgres-clusters
+spec:
+  destination:
+    name: ""
+    namespace: matrix
+    server: "https://kubernetes.default.svc"
+  source:
+    path: cnpg-system/postgres-clusters
+    repoURL: "git@github.com:kareemlukitomo/homelab.git"
+    targetRevision: HEAD
+  sources: []
+  project: default
