@@ -18,6 +18,7 @@ spec:
     path: cnpg-system/postgres-clusters
   sources: []
   project: default
-syncPolicy:
-  automated:
-    prune: true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
