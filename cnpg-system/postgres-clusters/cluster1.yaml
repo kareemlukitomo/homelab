@@ -11,15 +11,15 @@ spec:
   stopDelay: 10
   primaryUpdateStrategy: unsupervised
 
-  bootstrap:
-    initdb:
-      database: postgres
-      owner: app
-      secret:
-        name: cluster-example-app-user
+  # bootstrap:
+  #   initdb:
+  #     database: postgres
+  #     owner: app
+  #     secret:
+  #       name: cluster-example-app-user
 
-  superuserSecret:
-    name: cluster-example-superuser
+  # superuserSecret:
+  #   name: cluster-example-superuser
 
   storage:
     size: "1Gi"
