@@ -19,3 +19,10 @@ spec:
         name: synapse-db-secret
   superuserSecret:
     name: synapse-db-secret
+  backup:
+    barmanObjectStore:
+      destinationPath: "gs://shaquillekareem/backup/homelab/synapse-cluster"
+      googleCredentials:
+        applicationCredentials:
+          name: backup-creds
+          key: gcsCredentials
