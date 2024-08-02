@@ -19,4 +19,5 @@ spec:
   sources: []
   project: default
 syncPolicy:
-  automated: {}
+  automated:
+    prune: true
