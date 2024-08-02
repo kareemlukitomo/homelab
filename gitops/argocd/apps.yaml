@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    path: gitops/argocd/apps
+    path: gitops/argocd
     repoURL: "git@github.com:kareemlukitomo/homelab.git"
     targetRevision: HEAD
     directory:
