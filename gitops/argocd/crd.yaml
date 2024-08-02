@@ -1,1 +1,18 @@
-kubectl apply -k https://github.com/argoproj/argo-cd/manifests/crds\?ref\=stable
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-crds
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/argoproj/argo-cd
+    targetRevision: stable
+    path: manifests/crds
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
