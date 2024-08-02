@@ -15,5 +15,7 @@ spec:
       encoding: "UTF8"
       localeCollate: "C"
       localeCType: "C"
+      secret:
+        name: synapse-db-secret
   superuserSecret:
     name: synapse-db-secret
