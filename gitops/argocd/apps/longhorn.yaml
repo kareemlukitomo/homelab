@@ -18,9 +18,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-  helm:
-    parameters:
-      - name: createNamespace
-        value: "true"
-      - name: namespace
-        value: longhorn-system
