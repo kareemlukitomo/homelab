@@ -2,7 +2,7 @@ apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
   name: generator-cluster1
-  namespace: default
+  namespace: matrix
 spec:
   description: "Generated Cluster 1"
   imageName: ghcr.io/cloudnative-pg/postgresql:15.1
