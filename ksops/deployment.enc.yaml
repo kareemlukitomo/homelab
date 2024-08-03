@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: nginx-deployment
+    labels:
+        app: nginx
+spec:
+    replicas: ENC[AES256_GCM,data:Zw==,iv:9aTVHALb2x8zpAOsuP2cVr7R0TEGAq3cilLC1ZkfXe0=,tag:Fj/7cqSqtxqnPqJVJyHQ4Q==,type:int]
+    selector:
+        matchLabels:
+            app: ENC[AES256_GCM,data:oWy9Lks=,iv:rTxj0W72i6t85L+Ji3mubo4SYPTzDn77Ocrg+XBE8ZI=,tag:LDkLznueG/6cki4lwWtlDA==,type:str]
+    template:
+        metadata:
+            labels:
+                app: nginx
+        spec:
+            containers:
+                - name: ENC[AES256_GCM,data:US8bhLc=,iv:q2KM5hGUoyFotWRvhTw2ZR4/OtRvwitGDqxglTxl8SE=,tag:SG0AawYQAIFy5nMGqKFL4g==,type:str]
+                  image: ENC[AES256_GCM,data:XeiJVJgscditBia3,iv:8/yVszZBphnbiNcV7jhCslLIvm51uOl/K5kTas2UZyM=,tag:sLUwiXbMoFoBplo4jK34rg==,type:str]
+                  ports:
+                    - containerPort: ENC[AES256_GCM,data:6U8=,iv:s+Wyustye4WBsSL1kaA8Xq5aTJQRRSyuWlPY+Y2hVqY=,tag:XEFuP86w0SbR7vc1d/rxIw==,type:int]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2024-08-03T13:08:45Z"
+    mac: ENC[AES256_GCM,data:VVV1J9V/rBCLf35JIFCL37EZbrtfBZYk7uwrAmsBFDdza+h3TmrZr73bzniFYDi6Ru9WVnUY3lFB84w8Ykt6SJRJTMuTH1dAWKGJPkC35ORNZCCLFhy4Lvh7UECz/Q8VT9hBrZBI2f19DCLUzu6xJOFYzoC2833epdDxzonKgzc=,iv:MapYCM8QFUB+TpGZGSzxmnyXZId1iGR7KJi7X9aWrQ0=,tag:HKWtP4O+FrDHUj1wUC1lFg==,type:str]
+    pgp:
+        - created_at: "2024-08-03T13:08:45Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hF4DT6AMeEvvTXYSAQdALHkURXmV9dQfAE+F6CMSEOE1S5+12LEt7yxKP2ilRGMw
+            4sK3vkFaQ+Y2skK2pQtnhRoCxFeAVjqKLykiCMn7HJtk7eyj6F8UTM8/2MNq7+fw
+            0lwBAd5OpSbHetCY1IFiK53t/rVOeZiE1FvzoxNMUOibrJT3gE0hOAhK3Xuv+vlb
+            fE/PiHJd+JZYfyDB+RBJ4vdBATjLi4k6W6yQzCOd5SeW3poA7PaX+0P/QCSTYA==
+            =KOHu
+            -----END PGP MESSAGE-----
+          fp: 57CA390B905856D199930D8E1AF3A11F4741A16A
+    unencrypted_regex: ^(apiVersion|metadata|kind|type)$
+    version: 3.9.0
