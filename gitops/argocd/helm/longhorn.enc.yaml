@@ -1,0 +1,107 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+    name: longhorn
+    namespace: argocd
+spec:
+    project: ENC[AES256_GCM,data:GWrPsPakqw==,iv:DtXHRWzlAKZ7SHiFQP+1OyLpIReSdNHuZN14RuHCd34=,tag:GjbxonO2dcSVFy3PtU+1+Q==,type:str]
+    source:
+        repoURL: ENC[AES256_GCM,data:QudfdWnq0DD2Oyj28vCOMkkVa0ee481oLwI=,iv:B0IIqYgfCRAzWvUAsJfcHJX3CCueVkPxlOv1vBlvS9I=,tag:G8xmxBiA8yvhHVsNhq5y5Q==,type:str]
+        targetRevision: ENC[AES256_GCM,data:3j2jqWo=,iv:ay3MD0dLpbs5tRiJzVnPELfGciP9WoNjbCOqjvKn6vg=,tag:FoYeFIe2e66RwptbuU0wMw==,type:str]
+        chart: ENC[AES256_GCM,data:JvakfzwDQeA=,iv:YFfDq5h69fO5s/VnYoH0vCHddUzLmJq6neHiH8TsjmQ=,tag:U7DkQwpkUQdTs9k4+Fmhvw==,type:str]
+        helm:
+            parameters:
+                - name: ENC[AES256_GCM,data:IMESNrfjImX/d2XE0cxdgRMMFIfNAB4JXnm+TQ==,iv:68jN0kyax3TWdrGj8k/t5T0hblk/0RadCxfWMhXmx9Y=,tag:6LY6Rki3R9AgQT2qZxvTIA==,type:str]
+                  value: ENC[AES256_GCM,data:3HVkLnnISYrMESPROqvuil9XEkOPfL06TKSP5RFvQHS2yX2mxZZKJ1A=,iv:SXNV4ooySWafqtp3YD+C+k+ZHca188llGPcdII97DNg=,tag:XgecScVQVKbFlxXsGOu8jg==,type:str]
+    destination:
+        server: ENC[AES256_GCM,data:FB0TNDFSn2iUlQsWjn5Qk6BbdHSSQ47ap6rbEHcX,iv:EGJGA5tI/dBlG8MR2ik6lXN7NmQVsA0COEhsORh6jTk=,tag:agpudvj4Od9sTYDZG1AXrw==,type:str]
+        namespace: ENC[AES256_GCM,data:m2xogn1JuVexF7Rs2gB8,iv:k5Txxkus6Z2FBfcm1sTul700s6DhzLPfJK7GBY2A1yw=,tag:527gYjAVYzRkq6ercEQ6Mw==,type:str]
+    syncPolicy:
+        automated:
+            prune: ENC[AES256_GCM,data:N8n3UQ==,iv:Aknb8lac2Z7y8xfdhiQE1399ujX0jVPKTJjwekLD57Y=,tag:KIPtShGKD49ne7CO4wJSKw==,type:bool]
+            selfHeal: ENC[AES256_GCM,data:yMHNIA==,iv:nY8LZHL/8+T6JmIEUnv7P3zVz0lP/gLTxr1MWwG3N8I=,tag:gnIrdVmeSgiwhhNagIEVCQ==,type:bool]
+        syncOptions:
+            - ENC[AES256_GCM,data:y4n/KlX0YbFu7tuRH4vmtiUknYw=,iv:HOrOFdrF74PDl/g1GeHe0hKkO72PFQ9Alvyaw/d4vDo=,tag:/5G2cCehmgp7etBMI80/dg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2024-08-04T01:35:16Z"
+    mac: ENC[AES256_GCM,data:y0Q7oGVEj5AUQQ/p9vjabrTApuBeWv0j5OAFQ0shwXPbx4AYtR8pwKeml/J/qklE+MtFtef6+ZeXIaxQ3N82FkTXAeR5repZzQHkqVnn3MR1HZrTQJQtaJpcZSQqDFkbUBYR4HvlkcTnzQKdd3URZkH5OCc+q6tzQiTsQkjgttk=,iv:bOU4pDIQgLrzIjRbHxFNakEN3hBznc1zP8/0kzxIR/I=,tag:aoNIplBz2ib+KdyfZK0YQA==,type:str]
+    pgp:
+        - created_at: "2024-08-04T01:35:16Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA2wploviDREZAQ/+JbWkzGRYSYo0QwJQvSN4NgFVDVftK81ch4P5KhuqVFnT
+            OUJa3knvsEwV9S7Fg9Boh52SS0VHaXPvfQmrm+H0QTBmIi5IhwAf6/TRms4q+mwc
+            6XRNH10vpOn9fkvciX+XxWWuWc6PxxqN7nG2AkmgL9maHBuyaeRu1O0VoXNKM41m
+            6aU8KoV1BUlQnxz5Zyi98kTwyEgTsfVi0unYSqgF2fiH5pNxf+Zz183xOKhrmi6Y
+            UjDkxT9Vd7j6WoogcqXOsaK/QOO5DOrZw+Z5sWvvWCydotlBVwlddz0g3O9BdM5C
+            lKnJB2aL9XuXqxZV1jfZM9JjrU5ECtmsDGDyQS7/UkAeR20ErDjKVYHPVaXPE1Mt
+            +wmD7RY+phCA7ERklPRJZ8hqXtVtbfe8Y18rdU6h4/Ew7MuBj9kYK1YqwU8PMwCQ
+            pgjl1BeeEAWKT4h08wJk0kDjRSZoZAM7XLeo0ImcmheUctLogk9k7mV5qunmoQI9
+            EfSbugppgEckAG3cAOfFosel0Ecks74Dgr+T17zzX3++zUKmB6gwYbDvnhmnOBDB
+            7oGBZncPOUzTuXD7iogykIJQLDvuvnZ1tF9z6Gs6f3IufAOpFhtKZpg2/Ep+a2sz
+            rN2/S6akpUPuiPJ5ZD6nfq+cHdLvY4LLTR7MQ7ZiV6eOAypjHGgU12n5pidyfyHS
+            XgEixcKUwwnNTpVU+8SlXuQ9xzz8rD/qYAaQYcF0VPZ4nVOUaBvCYfErKjjZlBXJ
+            z/W4Q3XZx1/bpOwzCVSRCNVUiTc2gzIq8o7eidLNH0ucU/YRy3PPBKVj+mSHM6Q=
+            =vo66
+            -----END PGP MESSAGE-----
+          fp: 2B3289FB52F647985547AAFA78594004D427BD9B
+    unencrypted_regex: ^(apiVersion|metadata|kind|type)$
+    version: 3.9.0
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+    name: longhorn-additional
+    namespace: argocd
+spec:
+    project: ENC[AES256_GCM,data:f1lOoghAsA==,iv:mmU3pu/ig/8rvpls3VrieYn/gBtnZHI1JLRjYqtqWok=,tag:+edTk9KN3RxtBCImcapMOg==,type:str]
+    source:
+        repoURL: ENC[AES256_GCM,data:ESJJmJpiYBXGrrDQ+axHuSRZhjUSO+s9Nz8LBYK9tJVykiNztQNm5Sk=,iv:RBEXrRNmLIarLWZzHzSZecsyMmPUgfPh5EHE3hbWdnE=,tag:pJg0G6OqhDsC6LFj70SPNA==,type:str]
+        targetRevision: ENC[AES256_GCM,data:/0M4hg==,iv:6+KoA3Ru7Sf6d+E0B6dNmUbei704QawUHGZyOq/oYjk=,tag:4uL9Eor14tkn5yVo6uZmeA==,type:str]
+        path: ENC[AES256_GCM,data:Ycs0rjj/40U8bd3uF1Bw,iv:HmyZD5E+PXrX7RZTpOKDyG6T5L762BPIEOXtg7kmo8A=,tag:dagNX+Cbd/2t6HzwlRateQ==,type:str]
+    destination:
+        server: ENC[AES256_GCM,data:0XeXJ+EbnR73GdHV5MEW2RUCyMs3EnYObVegPKN6,iv:lgeiC5dIrrmGM1OFYdqAMyuDXeXNZQc7OIjsF7ZJk/0=,tag:jdhV2da8WS0arwHQhOOOHg==,type:str]
+        namespace: ENC[AES256_GCM,data:wclLaCq4y63/BPt3l+ZT,iv:OQmCca7FtRftYmS21w170mg7Tu3HnE/JyI9+Pjtg0fE=,tag:UT4R8eHi0EABw7Ead1X9gA==,type:str]
+    syncPolicy:
+        automated:
+            prune: ENC[AES256_GCM,data:d0FliQ==,iv:NBx9COjGAVwHWyQtI+zD1t3Bayiziw0k5ebOA9UdJWc=,tag:M2jBfQtJM3kReReCm4IpPg==,type:bool]
+            selfHeal: ENC[AES256_GCM,data:dssz1w==,iv:/HBcW70zDgNaMoUEwX+eNzjIvfYC5mLhf47NzAeWoEs=,tag:vMmj8dg6t5H67MS1mjxblw==,type:bool]
+        syncOptions:
+            - ENC[AES256_GCM,data:HiabzhozpxlpuwR6j21rD+YAR3U=,iv:74wQ6f87IGz4TmS6e/4KHXP07+Ws3VGQn8ySPaRrmOU=,tag:E0F5Po0W5aFOVenYh19lVQ==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2024-08-04T01:35:16Z"
+    mac: ENC[AES256_GCM,data:y0Q7oGVEj5AUQQ/p9vjabrTApuBeWv0j5OAFQ0shwXPbx4AYtR8pwKeml/J/qklE+MtFtef6+ZeXIaxQ3N82FkTXAeR5repZzQHkqVnn3MR1HZrTQJQtaJpcZSQqDFkbUBYR4HvlkcTnzQKdd3URZkH5OCc+q6tzQiTsQkjgttk=,iv:bOU4pDIQgLrzIjRbHxFNakEN3hBznc1zP8/0kzxIR/I=,tag:aoNIplBz2ib+KdyfZK0YQA==,type:str]
+    pgp:
+        - created_at: "2024-08-04T01:35:16Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA2wploviDREZAQ/+JbWkzGRYSYo0QwJQvSN4NgFVDVftK81ch4P5KhuqVFnT
+            OUJa3knvsEwV9S7Fg9Boh52SS0VHaXPvfQmrm+H0QTBmIi5IhwAf6/TRms4q+mwc
+            6XRNH10vpOn9fkvciX+XxWWuWc6PxxqN7nG2AkmgL9maHBuyaeRu1O0VoXNKM41m
+            6aU8KoV1BUlQnxz5Zyi98kTwyEgTsfVi0unYSqgF2fiH5pNxf+Zz183xOKhrmi6Y
+            UjDkxT9Vd7j6WoogcqXOsaK/QOO5DOrZw+Z5sWvvWCydotlBVwlddz0g3O9BdM5C
+            lKnJB2aL9XuXqxZV1jfZM9JjrU5ECtmsDGDyQS7/UkAeR20ErDjKVYHPVaXPE1Mt
+            +wmD7RY+phCA7ERklPRJZ8hqXtVtbfe8Y18rdU6h4/Ew7MuBj9kYK1YqwU8PMwCQ
+            pgjl1BeeEAWKT4h08wJk0kDjRSZoZAM7XLeo0ImcmheUctLogk9k7mV5qunmoQI9
+            EfSbugppgEckAG3cAOfFosel0Ecks74Dgr+T17zzX3++zUKmB6gwYbDvnhmnOBDB
+            7oGBZncPOUzTuXD7iogykIJQLDvuvnZ1tF9z6Gs6f3IufAOpFhtKZpg2/Ep+a2sz
+            rN2/S6akpUPuiPJ5ZD6nfq+cHdLvY4LLTR7MQ7ZiV6eOAypjHGgU12n5pidyfyHS
+            XgEixcKUwwnNTpVU+8SlXuQ9xzz8rD/qYAaQYcF0VPZ4nVOUaBvCYfErKjjZlBXJ
+            z/W4Q3XZx1/bpOwzCVSRCNVUiTc2gzIq8o7eidLNH0ucU/YRy3PPBKVj+mSHM6Q=
+            =vo66
+            -----END PGP MESSAGE-----
+          fp: 2B3289FB52F647985547AAFA78594004D427BD9B
+    unencrypted_regex: ^(apiVersion|metadata|kind|type)$
+    version: 3.9.0
