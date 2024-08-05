@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 4096m
+  name: synapse-ingress
+  namespace: matrix
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: matrix-v2.lukitomo.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: synapse
+            port:
+              number: 8008
+        path: /
+        pathType: Prefix
