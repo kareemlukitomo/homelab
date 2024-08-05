@@ -1,0 +1,25 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ingress-definitions
+  labels:
+    app.kubernetes.io/name: ingress-definitions
+    app.kubernetes.io/part-of: ingress-nginx
+    app.kubernetes.io/managed-by: argocd
+    name: ingress-definitions
+  namespace: argocd
+spec:
+  destination:
+    namespace: "*"
+    server: "https://kubernetes.default.svc"
+  source:
+    repoURL: "git@github.com:kareemlukitomo/homelab.git"
+    targetRevision: HEAD
+    path: ingress
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
