@@ -1,0 +1,74 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+    name: sliding-sync-proxy
+    namespace: argocd
+    labels:
+        app.kubernetes.io/instance: argocd-helm
+spec:
+    project: ENC[AES256_GCM,data:1ZyE/n8hlg==,iv:eX77a68A/2vSW/uIYwIGkmeX12+YAGzwD8EhSJimaF4=,tag:TWw+KZYFH0s9UL2Lydb30A==,type:str]
+    source:
+        repoURL: ENC[AES256_GCM,data:R8fHczEY4F+LpendYR95wcIqYFDr7Qyrc04DZfHW+x4=,iv:3b3lMNjcsF0g6AeTi3QrfnmdfMMoFhuqMXfA6lAw5kI=,tag:Zur0vItLrsT2ieAheyZ2mw==,type:str]
+        chart: ENC[AES256_GCM,data:RQNiL0FJWLOUAJflmzUEREbs,iv:o/CRdtSvnNU2sL0Ut1QrbbLGZXcU1XJUmcBDwAszz5o=,tag:BN8bvnQmSo75isQ6M4MVJA==,type:str]
+        targetRevision: ENC[AES256_GCM,data:Li0WPL2Y,iv:lS64+tSaGT803XvjHXhtypqpAHZkOayUYyCLaOf7h84=,tag:j4VCyeT3W8KEnDZKTCW8iQ==,type:str]
+        helm:
+            releaseName: ENC[AES256_GCM,data:JNET61DGlVN3vQiOkdLIJCh3,iv:16vg+Dd2s1VI7MLJbGN168srMOCHLfkGfioLGVc1qTU=,tag:tOv3yye7k8uxgyyiQ4dvnQ==,type:str]
+            parameters:
+                - name: ENC[AES256_GCM,data:Lt3h2e3/fxoC0dXbCmnf4KitGSA7O8o=,iv:FVQA3GWpY/Ru+3VSy9xDHwcL449TOv3ns5JcU9BeICo=,tag:F+d188G//qEcNQRgxKKPTw==,type:str]
+                  value: ENC[AES256_GCM,data:MqYKY65UGLgu/AA2Vd5rAy39FBJ4sicipDSXUkxFAEr3VQqV57qoh+40Lw==,iv:LFcl16DwxIi1D5BNe5y2VKvUBHNznTwAtInPKn8xa0E=,tag:LhS5vYdXQatyc4RkThxeCw==,type:str]
+                - name: ENC[AES256_GCM,data:DsYsyg2e2md/6QHQSMlWI85iT3clqqA=,iv:9jJyFzD4CugyR+lDCIuRtK5D9ncfwoUMIlBuba7iJ9I=,tag:zvc+0tkioa6Zml22Dv7UmQ==,type:str]
+                  value: ENC[AES256_GCM,data:S4spyA==,iv:t6oUOL78yPwqU+MXMyaCIW8AsSmz/sXw7Lqf4X77jck=,tag:d7b9YDgTInfNsLgafGFU1w==,type:str]
+                - name: ENC[AES256_GCM,data:89rgHu1LgHKkTh3yQo9uGNvC1dDvc3B5hng=,iv:S16ne+fHzbhlSdNYP9y7KYHXKei/32KbHeTM95/ixAI=,tag:wpzKifQOZOsQjZwKbBFmpw==,type:str]
+                  value: ENC[AES256_GCM,data:zbEHw0qnIA==,iv:zZ6ve082OvWxZAlstUDhJcdLfqwR75QNSmsupKNwmsU=,tag:AOFjOl+1b6bBo5W4jsacvA==,type:str]
+                - name: ENC[AES256_GCM,data:cqOhW/seT0Vk3S5CiXaT7vUGW5yia4EeRSav,iv:wjyjKGIhvvqzaEVQ9RhH/H2cvZc5bSbXmr1VY0vrteQ=,tag:nFWNIqe9HXrlYyHEMgtyAg==,type:str]
+                  value: ENC[AES256_GCM,data:zf2QvCf77//J7GSv,iv:rFTvwyht9GMSthM9GrfxqfiDgOZyERP1f+0xTQQJs5U=,tag:yF6JiE6dqnf+OhZLVaBMqA==,type:str]
+                - name: ENC[AES256_GCM,data:Z7LFkmR7edNZS9AgJ1AJ6jv/nMFISBxueN7p,iv:k5I/ucZZZyWrfuedaRP7g3T6G4vJ9HA4UXchbhZ6Pqc=,tag:WW3RH1erf8TO59LiYZxB9g==,type:str]
+                  value: ENC[AES256_GCM,data:PmNoHJ+SI/aJf0Rc,iv:9F4Kj9kRYKQh5rr0vQlyq7zIxjW4t9W79IrV+ekBB44=,tag:ieS6P4JCgLi9Gwr40lqSXQ==,type:str]
+                - name: ENC[AES256_GCM,data:+/2cikLb+rzOaSCJeEJVG2R1C/3PQCdqnBJC,iv:efL5s4jmXAaloHMKm+oC4a9y5f0oMCYWeqqH6UXkeoM=,tag:j95K1Vca/HYkWGkA4YKIiA==,type:str]
+                  value: ENC[AES256_GCM,data:9xntxGNjkt+su3/qUUj6uTzRyOdlQAnlZb2CzIqWdw8=,iv:F05L8/GLewmJJzOPSb+N5ZrDDZ9V8jqUd9VGdZbzP1I=,tag:9zkSTXwhRnnevvY4wJ5g3A==,type:str]
+                - name: ENC[AES256_GCM,data:ZcyGrKHRWE8NJJsq,iv:z91ielLzOQZaSfAhLvr11dISSDyzjWAoQ1aduPLDmlQ=,tag:x65vPk3j44XiTx5kY0FcJQ==,type:str]
+                  value: ENC[AES256_GCM,data:VSp0lO9J4vzYxfpiIJcSnJgQslM2NEkCXJi2K3MoVDrB+PbM8pwe1RHtj68=,iv:CEpaSAWjrpFBzAd7PyN1tziwvf+3tSuQdGf3HkwKgXM=,tag:LgsFWdIJAB7vHAKs/aqqIg==,type:str]
+                - name: ENC[AES256_GCM,data:iJR9OdZcDqYOWdc0snm4,iv:HVDkYReyjWwGMlViU5hNjhyQHZChC63DfJfQxoPYMyA=,tag:awLaqDiJM5/49aPZYB+UcA==,type:str]
+                  value: ENC[AES256_GCM,data:9z6EQw==,iv:vUn0WVmiUKhtMNYyg7RMzwCQoDd5nfijSDVnLL3E5ow=,tag:RMcy3rMf4YmohzcAqWPfqA==,type:str]
+                - name: ENC[AES256_GCM,data:KZe5WQVS/Lt0G0bswQ==,iv:c1oe7UuCiPp5gi4bUzjnyFiwLJQQ2NsRJx46+puDYiw=,tag:CQZCYlAIlibggmD0ht4XkA==,type:str]
+                  value: ENC[AES256_GCM,data:gBnIznn5q8cEArJtPtrCMG//gyE=,iv:v1ukENBt39kzeYuzsDvGJIcF1morh6SCgZ92YchN9OE=,tag:nPEgS6nVWW/xgmroOt2LbA==,type:str]
+    destination:
+        server: ENC[AES256_GCM,data:uud3abgnDAH+bDXK9fJRlV5Dxv80j6IysDagxY0y,iv:oxtiHuZMcjXX0v0CzcBHZ9ruOYOIW6hVUklAnn8jTb0=,tag:p45cydPJDAG763gkh8goiA==,type:str]
+        namespace: ENC[AES256_GCM,data:5uA+cdXb,iv:C+8pTaetxFU1fyKz4PEzAstJ3JFNC90gQz+oWtPhOm8=,tag:fYCGIMs3LCRnZxNYxqcwaw==,type:str]
+    syncPolicy:
+        automated:
+            prune: ENC[AES256_GCM,data:oh5HNg==,iv:7LtrmgL/wOcOOtHQ50fnAcY2FMSFGqyIC6+nwHERXJ0=,tag:EZ7NL4JdeVxhJ6l9UEujTw==,type:bool]
+            selfHeal: ENC[AES256_GCM,data:aGmqfA==,iv:gtGCWiHZo7eHVIM0U+fBb05K7uOATaWJjphQpXRF/3M=,tag:/z+Uy85ep46EgrR00oeydg==,type:bool]
+        syncOptions:
+            - ENC[AES256_GCM,data:JOBe2A3RQHDo7HKQxpvG6R4NvF0=,iv:IUAWMMMrK0dsjeSUF++E/eTUbXD9Dvr74A88q3E85Hw=,tag:XcueuY1uQMuj9gnEXRUm+g==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2024-08-06T07:21:08Z"
+    mac: ENC[AES256_GCM,data:M0uf/Rd/xYrxGMcBUunfLLFkKYtgWFvdpVfY4jJ6Gzmeyn2WcZ+xOX5k72568ueXuucw/p19ukVCB2vxGFR4Fyt88Ga7hen94UiT1PiUy7K72UuXIRdEFB93S7Eqa7BnTQ8TAxvKFq/gIFZwIP6hSt0yHc7OFuzdr4tHlJIEdiY=,iv:JHexEojWvfA4L2zTw+msUpwHwpPsOZ/uYo7FIdkjwB4=,tag:l5By/CJsrVVSkNvX3O3UEg==,type:str]
+    pgp:
+        - created_at: "2024-08-06T07:21:08Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA2wploviDREZARAAozs0HCoogHvjxjiN45oGkbPkOQ+NGtBUxvy/kVbky37z
+            S021tSQat8Xo4g5bzedNZbxA+GWw9L7LIfSr1CGigX8OfPjdQSKcRNfYjAtRkpoY
+            k3kwTeqsJ7G1EU6F2alCD/8bcVY3CEouZ0Jy3mCEs5326riwsYWpyNQCevbz9T3r
+            ZIXP7JkZid35StxeEG+asFYvWyJAFLnXWNS3kHVVslVRV8i/3EZuYvekfZ6DoTOp
+            GdyTsgO8GuadK/lFLevd3WLASa+CDOagt85TO2HLgGob+Ui8+rs5Jk80zrnROBar
+            klphwy0f5p/NHbzdz3uJxuN1eWRge8HECgQH43xpYugPbCtcRq43ZMJw4AP/bOwh
+            pMS7cRI9Ei8yGZCc8fCVrQr39RZ5eAOanhzgjA3KsyIPLEw7Epk8bFO/i5P5I80Z
+            JG6bDkAaQ+sNMpCbG7TqSjab/ODZui0c/NU4mcLJrPGdy78ydWB9QS9SnYZK325i
+            hO6KA2dLirt/T0ewiH0eUKmJmolQP7uRjWRZVQ/Z+HWbbTYmDWO0HRCS9iPKPDq0
+            GOTj5QB4YLzCD3eAjl+TUC5/mBoB9SHJtHSL5s33j8vXFVGS3LM94apLVcQD2z42
+            WDSh8PawTddddXZK2DZ8ahG/9tElqNPjbbbEi9Eoh/gW8uMX1DrhT/CNbugeZhvS
+            XgHxwWO+ExZSYcS8lWZtUWNZYCTWxSihSs2lijligT8tXoyXGEwqWA/ezpmeCpXN
+            TvIWC8PkV8hk0L8PQ8T25QwYOiGVpDxZS3jS1KL/uwojacR/uRV0VDk0ly6KW7k=
+            =9QBa
+            -----END PGP MESSAGE-----
+          fp: 2B3289FB52F647985547AAFA78594004D427BD9B
+    unencrypted_regex: ^(apiVersion|metadata|kind|type)$
+    version: 3.9.0
