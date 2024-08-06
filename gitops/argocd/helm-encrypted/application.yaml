@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: encrypted-helm
+  name: argocd-helm-encrypted
   namespace: argocd
 spec:
   project: default
