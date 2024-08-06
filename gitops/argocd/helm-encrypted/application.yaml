@@ -10,7 +10,7 @@ spec:
     path: gitops/argocd/helm-encrypted
     targetRevision: main
     kustomize:
-      namespace: default
+      namespace: argocd
   destination:
     server: https://kubernetes.default.svc
     namespace: "*"
