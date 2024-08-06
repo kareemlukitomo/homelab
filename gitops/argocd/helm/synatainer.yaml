@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: synatainer
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://ananace.gitlab.io/charts
+    chart: synatainer
+    targetRevision: latest
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: matrix
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  helm:
+    releaseName: synatainer
+    values: |
+      replicaCount: 1
+      image:
+        repository: ananace/synatainer
+        tag: latest
+        pullPolicy: IfNotPresent
+      service:
+        type: ClusterIP
+        port: 80
+      resources:
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
