@@ -1,19 +1,6 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: ScheduledBackup
 metadata:
-  name: dendrite-cluster-daily-backup
-  labels:
-    app.kubernetes.io/component: database-backup
-spec:
-  schedule: "0 0 0 * * *"
-  backupOwnerReference: none
-  immediate: false
-  cluster:
-    name: "dendrite-cluster"
----
-apiVersion: postgresql.cnpg.io/v1
-kind: ScheduledBackup
-metadata:
   name: synapse-cluster-daily-backup
   labels:
     app.kubernetes.io/component: database-backup
