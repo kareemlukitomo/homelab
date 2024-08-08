@@ -10,7 +10,7 @@ spec:
     path: "matrix/mautrix-telegram"
     targetRevision: HEAD
     kustomize:
-      namespace: argocd
+      namespace: matrix
   destination:
     server: "https://kubernetes.default.svc"
     namespace: matrix
