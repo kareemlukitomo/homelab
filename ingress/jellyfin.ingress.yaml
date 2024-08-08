@@ -6,13 +6,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: video.kareem.one
-    http:
-      paths:
-      - backend:
-          service:
-            name: jellyfin
-            port:
-              number: 8080
-        path: /
-        pathType: Prefix
+    - host: video.kareem.one
+      http:
+        paths:
+          - backend:
+              service:
+                name: jellyfin
+                port:
+                  number: 8096
+            path: /
+            pathType: Prefix
