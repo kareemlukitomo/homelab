@@ -1,2 +1,6 @@
 generators:
   - ./secret-generator.yaml
+
+resources:
+  - deployment.yaml
+  - service.yaml
