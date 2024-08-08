@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mautrix-signal
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: "git@github.com:kareemlukitomo/homelab.git"
+    path: "matrix/mautrix-signal"
+    targetRevision: HEAD
+    kustomize:
+      namespace: matrix
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
