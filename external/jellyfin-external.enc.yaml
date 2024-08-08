@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: jellyfin-external
+    namespace: notification
+spec:
+    type: ExternalName
+    externalName: ENC[AES256_GCM,data:4NiyvCG1B/aRTw==,iv:aRbpgiC0WQgJa7f9oSFvSsQnN3jZSabb7MAcGooZV98=,tag:9QXy9nJCRtMViE+fsIINJQ==,type:str]
+    ports:
+        - port: ENC[AES256_GCM,data:yDe5Rw==,iv:lePmtTXl+cIhvD91E9p1vlsStWCJjAV3yKV/dVpFifM=,tag:iLOiJ370IyCIbxBZ8NfEZQ==,type:int]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2024-08-08T20:33:54Z"
+    mac: ENC[AES256_GCM,data:P5VetuxiCHgl40jG40LxwVKPufRUlDelXUZ9Hrt/BLKNGZ5NGnTk5k+NSrvG7jNiV1HB8yV6YrLvYJdOEBceig7TixWV+F4wNrDgOBFINCS1hdNEYBqf6aCWWISFTGEa2he3YPKexGbDt288RTM1HCAKH71HtrohMr0nBuNceCA=,iv:pO76ZVoGONyCVsPDt2KmvfkPy9GFch6xNJmLYwbuNiU=,tag:/sGiVc2UmLshhTMskHYpRw==,type:str]
+    pgp:
+        - created_at: "2024-08-08T20:33:54Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA2wploviDREZARAAxJKJuOn/eOMbcR5QbvCiWyo2Zz1suBoZYhdqKGhagMUY
+            D3h3jMRqmcYtiSBa5xSgZrFJlvfRkOHIvw1hqzBnLGP1EhpoxYjBBVNnMppbhVu4
+            gLvBsuxd3YUtDMGcByszXuWer0gqnNIHjsUJhl5tNRLkR3JsTJDjrQvTLWJ4yS5y
+            h1945YMjB8pbdPYgJM8NfczSIgBnia8lTfR8FJmQWZPBIFdr7NTenBCBpPITtmMq
+            gLaaFwlsVC850jOepI/jQHY7lz8tzSLToPt/O5iZQsAsSiIwTMUzyGWzZAPlTlmD
+            rviMTSMr3mgQtcdcXc8UHD7vyxxFZvbIlM+f8wgyE+OcSWoP3acOKAJM3gu1GmPW
+            Kd9CsrvQe8GGbrZpdkhbdfF65XlEHpkPZflhLSK+uFHIGWFaB/b0kehi5Q/fUfID
+            o/BKXoO8zMG22CdP+kAfGFLHV0q8oNS0dGFG5XQjFWGe+k+4o7JkPUjrov1k+gh4
+            wY1GMzjc4/Jp5cliA0wcHVcWYXXPCJ7D05ju6E8qhPfrce/RWvHCBXH8ysv9s7l+
+            +GRU9muWvnsxef0YKp1pfWop1+B3PkaPMd8Fdtkp9tGop5YWnyxjEBf2Zy2CSXex
+            0FnfmbNEvYX+QSfJN4AT2UMtmDwnSakIV+JYQ7RZr+rfIom4AUrFOWLS7h8IOFvS
+            XgFkQqciM+WVP5+OuS71RmjkuXK6KUrNSzWuTgGOqOWi5vy3GpyOWEm4c0Cu+lZc
+            umybMWzx1vAlykjDIZEtttSi9Q6Cv0awbP2WajZzft76fVkDaQNJVYVkDZQj+0o=
+            =FVOE
+            -----END PGP MESSAGE-----
+          fp: 2B3289FB52F647985547AAFA78594004D427BD9B
+    unencrypted_regex: ^(apiVersion|metadata|kind|type)$
+    version: 3.9.0

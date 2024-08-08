@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: external-services
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: "git@github.com:kareemlukitomo/homelab.git"
+    path: "external"
+    targetRevision: HEAD
+    kustomize:
+      namespace: "*"
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: "*"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
