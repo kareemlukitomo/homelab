@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mautrix-telegram
+  labels:
+    app: mautrix-telegram
+    app.kubernetes.io/name: mautrix-telegram
+  namespace: matrix
+spec:
+  ports:
+  - name: mautrix-telegram
+    port: 29317 
+  selector:
+    app: mautrix-telegram
+
