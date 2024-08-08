@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mautrix-whatsapp
+  name: mautrix-whatsapp
+  namespace: matrix
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: mautrix-whatsapp
+  template:
+    metadata:
+      labels:
+        app: mautrix-whatsapp
+    spec:
+      containers:
+      - image: dock.mau.dev/mautrix/whatsapp:latest 
+        name: mautrix-whatsapp
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        ports:
+          - containerPort: 29318
+            name: "mautrix-wa"
+        volumeMounts:
+          - name: mautrix-whatsapp-configmap-volume  
+            mountPath: "/data/config.yaml"
+            subPath: config.yaml
+          - name: mautrix-whatsapp-configmap-volume  
+            mountPath: "/data/registration.yaml"
+            subPath: registration.yaml
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+        - name: mautrix-whatsapp-configmap-volume 
+          configMap:
+            name: mautrix-whatsapp-configmap 
