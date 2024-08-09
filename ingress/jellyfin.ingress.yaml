@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: jellyfin-ingress
-  namespace: notification
+  namespace: external
 spec:
   ingressClassName: nginx
   rules:
